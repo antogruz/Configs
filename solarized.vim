@@ -641,6 +641,8 @@ exe "hi! customArgs" .s:fmt_undi
 exe "hi! customLastArg" .s:fmt_bold
 "exe "hi! AL_Prefix"  .s:fmt_bold .s:fg_base03 .s:bg_base02
 
+exe "hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none
+
 "}}}
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------

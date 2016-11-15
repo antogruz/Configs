@@ -56,6 +56,7 @@ plugins=(z git colored-man zsh-syntax-highlight )
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/tac/Travail/gits/buildroot/output/host/usr/bin:/home/tac/bin:/home/tac/Travail/2015.1/gnu/microblaze/lin/bin"
+export PATH=$PATH:"/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

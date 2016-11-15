@@ -63,6 +63,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Fast saving
+imap <leader>w <Esc>:w!<cr>
 nmap <leader>w :w!<cr>
 
 
@@ -122,7 +123,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -377,7 +377,7 @@ function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
    let l:alternateBufNum = bufnr("#")
 
-   if buflisted(l:alternateBufNum)
+   if bufnisted(l:alternateBufNum)
      buffer #
    else
      bnext
@@ -462,9 +462,40 @@ nmap <C-e>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-e>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 
 " cause you know, ESC is bad
+imap <A-a> <Esc>a
+imap <A-b> <Esc>b
+imap <A-c> <Esc>c
+imap <A-d> <Esc>d
+imap <A-e> <Esc>e
+imap <A-f> <Esc>f
+imap <A-g> <Esc>g
+"imap <A-h> <Esc>h "Matches è
+"imap <A-i> <Esc>i "Matches é
+imap <A-j> <Esc>j
+nmap <A-j> j
+vmap <A-j> <Esc>j
+imap <A-k> <Esc>k
+nmap <A-k> k
+vmap <A-k> <Esc>k
+imap <A-l> <Esc>l
+imap <A-m> <Esc>m
+"imap <A-n> <Esc>n "Matches ^i
+imap <A-o> <Esc>o
+imap <A-p> <Esc>p
+imap <A-q> <Esc>q
+imap <A-r> <Esc>r
+imap <A-s> <Esc>s
+imap <A-t> <Esc>t
+imap <A-u> <Esc>u
+imap <A-v> <Esc>v
+imap <A-w> <Esc>w
+imap <A-x> <Esc>x
+imap <A-y> <Esc>y
+imap <A-z> <Esc>z
+imap ,c <Esc>
 imap jk <Esc>
-imap jj <Esc>ljj
-imap kk <Esc>lkk
+imap jj <Esc>
+imap kk <Esc>
 
 
 set foldmethod=indent
@@ -506,11 +537,13 @@ set background=light
 colorscheme solarized
 "let g:solarized_contrast="high"
 "let g:solarized_visibility="high"
-set guifont=Droid\ Sans\ Mono\ 11
+"set guifont=Droid\ Sans\ Mono\ 11
+set guifont=Noto\ Mono\ Regular\ 11
 call togglebg#map("<F5>")
 
 autocmd BufEnter * :syntax sync fromstart
 
+match 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -532,4 +565,26 @@ fu! DeleteHungarians()
 :endfunction
 
 "autocmd BufRead Scheduler.c :call DeleteHungarians()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
 
