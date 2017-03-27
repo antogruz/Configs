@@ -73,9 +73,6 @@ bindkey "^N"  history-beginning-search-forward
 bindkey '^r'  history-incremental-search-backward
 
 export KEYTIMEOUT=1
-export CXX='ccache g++'
-export CC='ccache gcc'
-export CCACHE='ccache'
 
 alias m='make -j8'
 alias mktags='ctags -R .'
