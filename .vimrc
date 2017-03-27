@@ -66,6 +66,7 @@ let g:mapleader = ","
 imap <leader>w <Esc>:w!<cr>
 nmap <leader>w :w!<cr>
 
+set clipboard=unnamedplus
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -377,7 +378,7 @@ function! <SID>BufcloseCloseIt()
    let l:currentBufNum = bufnr("%")
    let l:alternateBufNum = bufnr("#")
 
-   if bufnisted(l:alternateBufNum)
+   if buflisted(l:alternateBufNum)
      buffer #
    else
      bnext
@@ -429,14 +430,11 @@ call vundle#end()
 "let g:ycm_key_list_select_completion = ["<TAB>"]
 "let g:ycm_key_list_previous_completion = ["<S-TAB>"]
 
-" annoying msg, i wrote this config
 "let g:ycm_confirm_extra_conf = 0
 "filetype plugin indent on
 
-" tags used outside of their rep
-set tags+=/home/tac/Travail/gits/embedded_tests/linux/tags
-set tags+=/home/tac/Travail/soft_enc/tags
-set tags+=/home/tac/Travail/soft_dec/tags
+nmap <C-s> <C-]>
+
 " find this C symbol
 nmap <C-e>s :scs find s <C-R>=expand("<cword>")<CR><CR>
 
@@ -497,6 +495,8 @@ imap jk <Esc>
 imap jj <Esc>
 imap kk <Esc>
 
+imap <C-f> <C-x><C-f>
+
 
 set foldmethod=indent
 
@@ -543,7 +543,6 @@ call togglebg#map("<F5>")
 
 autocmd BufEnter * :syntax sync fromstart
 
-match 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -552,39 +551,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 let g:solarized_termcolors=16
 
-" AutoCommands al_specific
-fu! DeleteHungarians()
-	" AL_TScheduler -> Scheduler
-	:%s :AL_T\(\u\):\1:g
-	" AL_Scheduler_Init -> Scheduler_Init
-	:%s :\<AL_::g
-	" m_uMaxCoreResource -> uMaxCoreResource
-	:%s :\<m_::g
-	"
-	:%s :\<\l\(\u\):\L\1:g
-:endfunction
+source ~/.vimsauce/al_indent.vimrc
 
-"autocmd BufRead Scheduler.c :call DeleteHungarians()
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=2
-set tabstop=2
-
-" Linebreak on 500 characters
-set lbr
-set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
-
+map <F4> *:!grep -n --exclude-dir=".svn" --exclude="*~" --exclude=tags -I -r -w <C-r><C-w><CR>
+map <F2> :! bash `ls check*` <CR>
+nmap <CR> :!
 

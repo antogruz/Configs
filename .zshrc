@@ -55,9 +55,10 @@ plugins=(z git colored-man zsh-syntax-highlight )
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/tac/Travail/gits/buildroot/output/host/usr/bin:/home/tac/bin:/home/tac/Travail/2015.1/gnu/microblaze/lin/bin"
+export PATH="/usr/lib/ccache"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/home/tac/bin:/home/tac/Travail/Libraries/MicroblazeCompiler/gnu/microblaze/lin/bin"
 export PATH=$PATH:"/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=$PATH:"/opt/gcc-linaro-5.3.1-2016.05-rc2-x86_64_aarch64-linux-gnu/bin"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-vcs-prompt/zshrc.sh
@@ -74,9 +75,11 @@ bindkey '^r'  history-incremental-search-backward
 export KEYTIMEOUT=1
 export CXX='ccache g++'
 export CC='ccache gcc'
+export CCACHE='ccache'
 
 alias m='make -j8'
 alias mktags='ctags -R .'
+alias clojure='java -jar clojure-1.8.0.jar'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
