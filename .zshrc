@@ -74,6 +74,8 @@ bindkey '^r'  history-incremental-search-backward
 
 export KEYTIMEOUT=1
 
+export SVN_EDITOR=gvim
+
 alias m='make -j8'
 alias mktags='ctags -R .'
 alias clojure='java -jar clojure-1.8.0.jar'
@@ -101,7 +103,6 @@ alias clojure='java -jar clojure-1.8.0.jar'
 #
 # Example aliases
 alias vidummy="vim /home/tac/Travail/soft_enc/app_mcu/src/McuMsgHdlrDummy.c"
-alias svn-stash='python ~/.svn-stash-command/svn-stash.py'
 function softdiff() {
 if [ -z $2 ]
 then

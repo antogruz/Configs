@@ -556,4 +556,5 @@ source ~/.vimsauce/al_indent.vimrc
 map <F4> *:!grep -n --exclude-dir=".svn" --exclude="*~" --exclude=tags -I -r -w <C-r><C-w><CR>
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
+map <F1> :!./%<CR>
 
