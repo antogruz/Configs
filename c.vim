@@ -22,10 +22,8 @@ syn match cFuncDefinition "\~\?\zs\h\w*\ze([^)]*\()\s*\(const\)\?\)\?$"
 
 syn keyword Statement struct typedef union enum static const
 
-syn keyword Type AL_8U AL_16U AL_32U AL_8S AL_16S AL_32S AL_INT AL_64U AL_64S
-syn keyword Type AL_BOOL AL_SIZE AL_PTR
-
-syn keyword Constant AL_TRUE AL_FALSE
+syn keyword Type AL_64U AL_64S
+syn keyword Type AL_PTR64 AL_PADDR AL_VADDR
 
 " To test highlight
 syn keyword Type Type
