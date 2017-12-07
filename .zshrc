@@ -79,6 +79,7 @@ export SVN_EDITOR=gvim
 alias m='make -j8'
 alias mktags='ctags -R .'
 alias clojure='java -jar clojure-1.8.0.jar'
+alias gvim='gvim -O'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
