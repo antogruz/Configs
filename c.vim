@@ -39,3 +39,5 @@ syn keyword Ignore Ignore
 syn keyword Error Error
 syn keyword Todo Todo
 
+syn match mutex "Rtos_GetMutex"
+syn match mutex "Rtos_ReleaseMutex"
