@@ -16,6 +16,8 @@ hi def link cCustomClass Function
 
 syn match assertFunction "assert\h*(" contains=cCustomParen
 
+syn match annoyingLine "\/\*\**\*\/"
+
 syn match AL_Prefix "AL_"
 "Highlight Function Definitions
 syn match cFuncDefinition "\~\?\zs\h\w*\ze([^)]*\()\s*\(const\)\?\)\?$"

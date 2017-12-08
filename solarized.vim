@@ -637,10 +637,10 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 
 exe "hi! cFuncDefinition".s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! assertFunction".s:fmt_bold   .s:fg_green   .s:bg_none
+exe "hi! annoyingLine".s:fmt_none   .s:fg_base02   .s:bg_none
 exe "hi! mutex".s:fmt_none   .s:fg_magenta   .s:bg_none
 exe "hi! customArgs" .s:fmt_undi
 exe "hi! customLastArg" .s:fmt_bold
-"exe "hi! AL_Prefix"  .s:fmt_bold .s:fg_base03 .s:bg_base02
 
 exe "hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none
 
