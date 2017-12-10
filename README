@@ -1,0 +1,39 @@
+Installing new computer
+
+Dans les raccourcis, ajouter l'ouverture du terminal sur Ctrl-Alt-T
+
+$ su root
+# sudo adduser tac sudo
+Puis, redémarrer la session
+
+$ sudo apt install git
+
+$ ssh-keygen 
+$ cat .ssh/id_rsa.pub 
+Mettre la clé sur github.
+
+$ git clone git@github.com:antogruz/Configs.git
+
+$ sudo apt install vim
+$ sudo apt install vim-gtk
+
+$ sudo apt install curl
+$ sudo apt install zsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+$ ln -s Configs/.vimrc .vimrc
+$ ln -s Configs/.zshrc .zshrc
+
+Copier le dossier .vim d'un autre ordinateur, puis :
+$ ln -s Configs/c.vim .vim/after/syntax/c.vim
+$ ln -s /home/tac/Configs/solarized.vim .vim/bundle/vim-colors-solarized/colors/solarized.vim
+
+Si le clic molette ne marche pas :
+	https://ubuntuforums.org/showthread.php?t=943803&p=5943530#post5943530
+
+	Si le fichier /etc/X11/xorg.conf n'existe pas :
+		Lancer X -configure, puis copier le fichier généré à cet endroit.
+
+		Si X -configure affiche : "Only console users are allowed to run the X server"
+			Ouvrir le fichier /etc/X11/Xwrapper.config pour ajouter la ligne "allowed_users=anybody"
+
