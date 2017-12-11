@@ -553,6 +553,9 @@ let g:solarized_termcolors=16
 
 source ~/.vimsauce/al_indent.vimrc
 
+let b:findCount=0
+
+map <F3> *:source /home/tac/.vim/highlight.vim<CR>
 map <F4> *:!grep -n --exclude-dir=".svn" --exclude="*~" --exclude=tags -I -r -w <C-r><C-w><CR>
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
