@@ -650,6 +650,7 @@ exe "hi! Find2".s:fmt_revr .s:fg_red .s:bg_none
 exe "hi! Find3".s:fmt_revr .s:fg_magenta .s:bg_none
 exe "hi! Find4".s:fmt_revr .s:fg_violet .s:bg_none
 exe "hi! Find5".s:fmt_revr .s:fg_blue .s:bg_none
+exe "hi! Find6".s:fmt_revr .s:fg_base3
 
 "}}}
 " Extended highlighting "{{{
