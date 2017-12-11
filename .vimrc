@@ -555,6 +555,7 @@ source ~/.vimsauce/al_indent.vimrc
 
 let b:findCount=0
 
+map <F6> :source /home/tac/.vim/parametersHighlight.vim<CR>
 map <F3> :source /home/tac/.vim/highlight.vim<CR>
 map <F4> :execute '!grep -n --exclude-dir=".svn" --exclude="*~" --exclude=tags -I -r -w ' . expand("<cword>")<CR>
 map <F2> :! bash `ls check*` <CR>
