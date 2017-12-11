@@ -643,9 +643,13 @@ exe "hi! customArgs" .s:fmt_undi
 exe "hi! customLastArg" .s:fmt_bold
 
 exe "hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none
+
 exe "hi! Find0".s:fmt_revr .s:fg_green .s:bg_none
-exe "hi! Find1".s:fmt_revr .s:fg_blue .s:bg_none
+exe "hi! Find1".s:fmt_revr .s:fg_cyan .s:bg_none
 exe "hi! Find2".s:fmt_revr .s:fg_red .s:bg_none
+exe "hi! Find3".s:fmt_revr .s:fg_magenta .s:bg_none
+exe "hi! Find4".s:fmt_revr .s:fg_violet .s:bg_none
+exe "hi! Find5".s:fmt_revr .s:fg_blue .s:bg_none
 
 "}}}
 " Extended highlighting "{{{
