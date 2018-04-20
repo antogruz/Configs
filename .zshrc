@@ -1,3 +1,5 @@
+fpath=( /home/tac/.zshscripts $fpath )
+#
 # Path to your oh-my-zsh installation.
 export ZSH=/home/tac/.oh-my-zsh
 
