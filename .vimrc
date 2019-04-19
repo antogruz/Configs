@@ -39,17 +39,24 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-execute pathogen#infect()
+"Vundle things
+
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
 set nu
+
 
 " My additions
 " filetype plugin indent on
@@ -396,42 +403,9 @@ endfunction
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Bundle 'joonty/vim-sauce.git'
-Plugin 'gmarik/Vundle.vim'
+"Plugin 'altercation/vim-colors-solarized'
 
-" My Plugins here:
-" original repos on github
-"
-"Plugin 'Valloric/YouCompleteMe'
-"let g:ycm_server_keep_logfiles = 1
-"let g:ycm_server_log_level = 'debug'
-Plugin 'evidens/vim-twig'
-Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'edsono/vim-matchit'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-"Plugin 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-Plugin 'altercation/vim-colors-solarized'
-
-"Plugin 'vivien/vim-addon-linux-coding-style'
-
-call vundle#end()
-
-" ultisnips and youcomplete live in peace and harmony
-"let g:UltiSnipsExpandTrigger="<leader><TAB>"
-"let g:ycm_key_list_select_completion = ["<TAB>"]
-"let g:ycm_key_list_previous_completion = ["<S-TAB>"]
-
-"let g:ycm_confirm_extra_conf = 0
-"filetype plugin indent on
 
 nmap <C-s> <C-]>
 
@@ -550,8 +524,6 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 let g:solarized_termcolors=16
-
-source ~/.vimsauce/al_indent.vimrc
 
 let b:findCount=0
 

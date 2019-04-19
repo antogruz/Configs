@@ -1,7 +1,7 @@
-fpath=( /home/tac/.zshscripts $fpath )
+fpath=( /Users/agruzelle/.zshscripts $fpath )
 #
 # Path to your oh-my-zsh installation.
-export ZSH=/home/tac/.oh-my-zsh
+export ZSH=/Users/agruzelle/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,28 +53,25 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z git colored-man zsh-syntax-highlight )
+#plugins=(z git colored-man zsh-syntax-highlight )
 
 # User configuration
 
 export PATH="/usr/lib/ccache"
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/home/tac/bin:/home/tac/Travail/Libraries/MicroblazeCompiler/gnu/microblaze/lin/bin"
-export PATH=$PATH:"/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin"
-export PATH=$PATH:"/opt/gcc-linaro-5.3.1-2016.05-rc2-x86_64_aarch64-linux-gnu/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/bin:/Users/agruzelle/bin"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-vcs-prompt/zshrc.sh
-ZSH_VCS_PROMPT_ENABLE_CACHING='true'
-RPROMPT='$(vcs_super_info)'
+#source ~/.zsh/zsh-vcs-prompt/zshrc.sh
+#ZSH_VCS_PROMPT_ENABLE_CACHING='true'
+#RPROMPT='$(vcs_super_info)'
 
 bindkey -v
-bindkey   "^[Oc" emacs-forward-word   #control left
-bindkey "^[Od"  backward-word        #control right
 bindkey "^P"  history-beginning-search-backward
 bindkey "^N"  history-beginning-search-forward
 bindkey '^r'  history-incremental-search-backward
 
 export KEYTIMEOUT=1
+export CLICOLOR=1
 
 export SVN_EDITOR=gvim
 
@@ -105,7 +102,6 @@ alias gvim='gvim -O'
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias vidummy="vim /home/tac/Travail/soft_enc/app_mcu/src/McuMsgHdlrDummy.c"
 function softdiff() {
 if [ -z $2 ]
 then
