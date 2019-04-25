@@ -471,7 +471,8 @@ colorscheme solarized
 "let g:solarized_contrast="high"
 "let g:solarized_visibility="high"
 "set guifont=Droid\ Sans\ Mono\ 11
-set guifont=Noto\ Mono\ Regular\ 11
+"set guifont=Noto\ Mono\ Regular\ 11
+set guifont=Monaco:h13
 call togglebg#map("<F5>")
 
 autocmd BufEnter * :syntax sync fromstart
