@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Jenkinsfile-vim-syntax'
 filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -32,7 +33,7 @@ let g:mapleader = ","
 imap <leader>w <Esc>:w!<cr>
 nmap <leader>w :w!<cr>
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -472,7 +473,7 @@ colorscheme solarized
 "let g:solarized_visibility="high"
 "set guifont=Droid\ Sans\ Mono\ 11
 "set guifont=Noto\ Mono\ Regular\ 11
-set guifont=Monaco:h13
+set guifont=Monaco:h15
 call togglebg#map("<F5>")
 
 autocmd BufEnter * :syntax sync fromstart
@@ -487,9 +488,27 @@ let g:solarized_termcolors=16
 
 let b:findCount=0
 
+"Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=2
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
 map <F6> :source /home/tac/.vim/parametersHighlight.vim<CR>
 map <F3> :source /home/tac/.vim/highlight.vim<CR>
-map <F4> *:execute '!grep -n --exclude-dir=".svn" --exclude="*~" --exclude=tags -I -r -w ' . expand("<cword>")<CR>
+map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude="*~" --exclude=tags -I -R -w ' . expand("<cword>") . ' . '<CR>
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
 map <F1> :!./%<CR>

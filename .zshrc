@@ -111,3 +111,4 @@ else
 fi
 }
 
+alias ctags=/usr/local/Cellar/ctags/5.8_1/bin/ctags
