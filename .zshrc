@@ -75,6 +75,7 @@ export CLICOLOR=1
 
 export SVN_EDITOR=gvim
 
+alias ctags="`brew --prefix`/bin/ctags"
 alias m='make -j8'
 alias mktags='ctags -R .'
 alias clojure='java -jar clojure-1.8.0.jar'

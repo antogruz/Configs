@@ -32,8 +32,8 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Fast saving
-imap <leader>w <Esc>:w!<cr>
-nmap <leader>w :w!<cr>
+imap <leader>w <Esc>:wa<cr>
+nmap <leader>w :wa<cr>
 
 set clipboard=unnamed
 
@@ -439,10 +439,6 @@ set foldmethod=indent
 " edit and source vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>o oAL_
-nnoremap <leader>i iAL_
-nnoremap <leader>a aAL_
-nnoremap <leader>p iAL_<Esc>
 
 " CTRL p settings
 
@@ -514,6 +510,8 @@ map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude="*~" --exclude=tags 
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
 map <F1> :!./%<CR>
+"Remove all trailing whitespace
+nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 au Filetype xml :RainbowLevelsOn
 
