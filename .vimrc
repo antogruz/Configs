@@ -7,6 +7,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Jenkinsfile-vim-syntax'
+Plugin 'thiagoalessio/rainbow_levels.vim'
+Plugin 'tpope/vim-surround'
 filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -506,10 +508,27 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-map <F6> :source /home/tac/.vim/parametersHighlight.vim<CR>
-map <F3> :source /home/tac/.vim/highlight.vim<CR>
-map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude="*~" --exclude=tags -I -R -w ' . expand("<cword>") . ' . '<CR>
+map <F6> :source ~/.vim/parametersHighlight.vim<CR>
+map <F3> :source ~/.vim/highlight.vim<CR>
+map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude="*~" --exclude=tags --exclude="*class" -I -R -w ' . expand("<cword>") . ' . '<CR>
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
 map <F1> :!./%<CR>
 
+au Filetype xml :RainbowLevelsOn
+
+command -nargs=1 Fe e !findsource
+
+" adds to statusline
+set laststatus=2
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}
+
+" a little more informative version of the above
+nmap <Leader>si :call <SID>SynStack()<CR>
+
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
