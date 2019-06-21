@@ -58,7 +58,7 @@ ZSH_THEME="blinks"
 # User configuration
 
 export PATH="/usr/lib/ccache"
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/agruzelle/bin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/agruzelle/bin:/Users/agruzelle/mybin"
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.zsh/zsh-vcs-prompt/zshrc.sh

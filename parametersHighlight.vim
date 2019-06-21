@@ -6,6 +6,6 @@ silent! execute("/gradebug/e")
 normal f)
 for i in range(1, s:params)
   normal b
-  source /home/tac/.vim/highlight.vim
+  source ~/.vim/highlight.vim
   normal F,
 endfor

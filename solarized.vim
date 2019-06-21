@@ -577,7 +577,7 @@ endif
 
 exe "hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back
 
-exe "hi! Comment"        .s:fmt_ital   .s:fg_red .s:bg_none
+exe "hi! Comment"        .s:fmt_ital   .s:fg_base01 .s:bg_none
 "       *Comment         any comment
 
 exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
@@ -600,6 +600,13 @@ exe "hi! Statement"      .s:fmt_bold   .s:fg_violet  .s:bg_none
 "        Operator        "sizeof", "+", "*", etc.
 "        Keyword         any other keyword
 "        Exception       try, catch, throw
+"
+
+exe "hi! Private"      .s:fmt_none   .s:fg_base2  .s:bg_none
+exe "hi! Public"       .s:fmt_bold   .s:fg_magenta   .s:bg_none
+exe "hi! javaClassDecl"      .s:fmt_bold   .s:fg_yellow  .s:bg_none
+
+exe "hi! javaFuncDef"      .s:fmt_none   .s:fg_blue  .s:bg_none
 
 exe "hi! PreProc"        .s:fmt_none   .s:fg_orange .s:bg_none
 "       *PreProc         generic Preprocessor
