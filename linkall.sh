@@ -7,3 +7,9 @@ do
     rm $home/.vim/after/syntax/$f
     ln -s $home/Configs/$f $home/.vim/after/syntax/$f
 done
+
+for f in parametersHighlight.vim highlight.vim
+do
+    rm $home/.vim/$f
+    ln -s $home/Configs/$f $home/.vim/$f
+done
