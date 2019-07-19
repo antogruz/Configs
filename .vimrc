@@ -506,7 +506,7 @@ set wrap "Wrap lines
 
 map <F6> :source ~/.vim/parametersHighlight.vim<CR>
 map <F3> :source ~/.vim/highlight.vim<CR>
-map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude="*~" --exclude=tags --exclude="*class" -I -R -w ' . expand("<cword>") . ' . '<CR>
+map <F4> *:execute '!grep -n --exclude-dir=".git" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w ' . expand("<cword>") . ' . '<CR>
 map <F2> :! bash `ls check*` <CR>
 nmap <CR> :!
 map <F1> :!./%<CR>
