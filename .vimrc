@@ -515,7 +515,14 @@ nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 au Filetype xml :RainbowLevelsOn
 
-command -nargs=1 Fe e !findsource
+command! -nargs=1 Fe call FindEdit(<f-args>)
+
+function! FindEdit(name)
+    let files = split(system("findsource " . a:name))
+    for f in files
+        execute "tabe " . f
+    endfor
+endfunction
 
 " adds to statusline
 set laststatus=2
