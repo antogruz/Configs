@@ -370,6 +370,7 @@ filetype off
 
 
 nmap <C-s> <C-]>
+nmap <C-t> <C-T>
 
 " find this C symbol
 nmap <C-e>s :scs find s <C-R>=expand("<cword>")<CR><CR>
