@@ -18,6 +18,7 @@ set number " Show lines numbers
 set autoread " Set to auto read when a file is changed from the outside
 
 let mapleader = ","
+let maplocalleader = "\""
 
 " Fast saving
 inoremap <leader>w <Esc>:wall<cr>
@@ -243,7 +244,10 @@ endfunction
 
 " ctags shortcuts {{{
 nnoremap <C-s> <C-]>
+nnoremap <C-g> g]
 nnoremap <C-t> <C-T>
+nnoremap <C-d> <C-W>}
+nnoremap <C-z> <C-W>kZZ
 " }}}
 
 " edit and source vimrc {{{
@@ -327,7 +331,7 @@ function! <SID>SynStack()
 endfunc
 " }}}
 
-" Add thanks to «learn Vimscript the hard way» {{{
+" Adds thanks to «learn Vimscript the hard way» {{{
 
 noremap - ddp
 noremap _ ddkP
@@ -345,6 +349,9 @@ iabbrev @@ agruzelle@salesforce.com
 iabbrev swdf SfdcWordDelimiterFilter
 iabbrev ic incrementToken()
 iabbrev pbc public class
+iabbrev re return
+iabbrev return NOPENOPENOPE
+
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>f"
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>f'
@@ -377,14 +384,12 @@ augroup comments
     autocmd FileType vim nnoremap <buffer> <localleader>c I"<esc>
 augroup END
 
-iabbrev re return
-iabbrev return NOPENOPENOPE
-
 augroup abbrevs
     autocmd!
     autocmd FileType bash,sh iabbrev bang #!/bin/bash
     autocmd FileType bash,sh iabbrev set set -euo pipefail
     autocmd FileType bash,sh iabbrev fun function
+    autocmd FileType bash,sh iabbrev scriptdir scriptDir=`dirname "$0"`
     autocmd Filetype java iabbrev print System.out.println
     autocmd BufNewFile *.sh w
     autocmd BufNewFile *.sh :!chmod +x %
@@ -440,3 +445,4 @@ augroup END
 
 " }}}
 
+set tabpagemax=100
