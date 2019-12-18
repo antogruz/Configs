@@ -114,5 +114,5 @@ fi
 
 alias ctags=/usr/local/Cellar/ctags/5.8_1/bin/ctags
 
-export JAVA_HOME=/Users/agruzelle/blt/tools/Darwin/jdk/openjdk1.8.0_172_x64
+export JAVA_HOME=/Users/agruzelle/blt/tools/Darwin/jdk/openjdk_11.0.1_x64/
 . /Users/agruzelle/mybin/z.sh
