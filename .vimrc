@@ -303,6 +303,9 @@ nnoremap <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 noremap <F6> :source ~/.vim/parametersHighlight.vim<CR>
 noremap <F3> :source ~/.vim/highlight.vim<CR>
 noremap <F4> *:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w ' . expand("<cword>") . ' . '<CR>
+noremap <c-i> *N:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w "implements ' . expand("<cword>") . '" . '<CR>
+noremap <c-e> *N:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w "throw new ' . expand("<cword>") . '" . '<CR>
+noremap <c-b> *N:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w "new ' . expand("<cword>") . '" . '<CR>
 noremap <F2> :! bash `ls check*` <CR>
 nnoremap <CR> :!
 noremap <F1> :!./%<CR>
