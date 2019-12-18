@@ -421,8 +421,8 @@ augroup END
 
 onoremap i@ :<c-u>execute "normal! /\\h\\+@\\h\\+\r:nohlsearch\rvE"<cr>
 
-nnoremap « <<
-nnoremap » >>
+nnoremap < <<
+nnoremap > >>
 
 " Always show the status line
 set laststatus=2
