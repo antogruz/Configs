@@ -353,8 +353,8 @@ iabbrev swdf SfdcWordDelimiterFilter
 iabbrev ic incrementToken()
 iabbrev pbc public class
 iabbrev re return
-iabbrev return NOPENOPENOPE
-
+iabbrev retrun return
+iabbrev retrnu return
 
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>f"
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>f'
