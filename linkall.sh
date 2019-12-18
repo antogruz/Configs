@@ -13,3 +13,12 @@ do
     rm $home/.vim/$f
     ln -s $home/Configs/$f $home/.vim/$f
 done
+
+dest="$home/.vim/plugin"
+mkdir -p $dest
+for f in grep_operator.vim google.vim
+do
+	rm $dest/$f
+	ln -s $home/Configs/$f $dest/$f
+done
+

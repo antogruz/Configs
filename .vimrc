@@ -448,4 +448,19 @@ augroup END
 
 " }}}
 
+" Use make with maven compile {{{
+set errorformat=[ERROR]\ %f:[%l\\,%v]\ %m,%-G%.%#
+set makeprg=mvn\ compile
+
+" }}}
+nnoremap <leader>b :execute "rightbelow vsplit" bufname("#")<cr>
+
+iabbrev importlist import java.util.List
+
+"nnoremap <leader>g :silent :execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 10<cr>
+nnoremap <leader>m :silent make<cr>:copen 10<cr>
+nnoremap « :cprevious<cr>
+nnoremap » :cnext<cr>
+
 set tabpagemax=100
+
