@@ -390,7 +390,7 @@ augroup END
 augroup abbrevs
     autocmd!
     autocmd FileType bash,sh iabbrev bang #!/bin/bash
-    autocmd FileType bash,sh iabbrev set set -euo pipefail
+    autocmd FileType python iabbrev bang #!/usr/bin/env python3
     autocmd FileType bash,sh iabbrev fun function
     autocmd FileType bash,sh iabbrev scriptdir scriptDir=`dirname "$0"`
     autocmd Filetype java iabbrev print System.out.println
