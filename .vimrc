@@ -276,7 +276,9 @@ let b:findCount=0
 
 "set guifont=Droid\ Sans\ Mono\ 11
 "set guifont=Noto\ Mono\ Regular\ 11
-set guifont=MonacoB2:h15
+"set guifont=MonacoB2:h15
+set guifont=Monaco:h13
+call togglebg#map("<F5>")
 
 "Coloration based on indentation
 "au Filetype xml :RainbowLevelsOn
@@ -352,7 +354,6 @@ iabbrev @@ agruzelle@salesforce.com
 iabbrev swdf SfdcWordDelimiterFilter
 iabbrev ic incrementToken()
 iabbrev pbc public class
-iabbrev re return
 iabbrev retrun return
 iabbrev retrnu return
 

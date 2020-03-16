@@ -22,3 +22,6 @@ do
 	ln -s $home/Configs/$f $dest/$f
 done
 
+solarized=$home/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+rm $solarized
+ln -s $home/Configs/solarized.vim $solarized
