@@ -32,3 +32,4 @@ ln -s $home/Configs/solarized.vim $solarized
 for f in .vimrc .zshrc
 do
     ln -s $home/$f $home/Configs/$f
+done
