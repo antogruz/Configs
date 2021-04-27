@@ -2,6 +2,7 @@
 
 home="/Users/agruzelle"
 
+mkdir -p $home/.vim/after/syntax
 for f in c.vim css.vim html.vim java.vim md.vim xml.vim
 do
     rm $home/.vim/after/syntax/$f
@@ -22,6 +23,12 @@ do
 	ln -s $home/Configs/$f $dest/$f
 done
 
-solarized=$home/.vim/bundle/vim-colors-solarized/colors/solarized.vim
+solarizedDir=$home/.vim/bundle/vim-colors-solarized/colors
+mkdir -p $solarizedDir
+solarized=$solarizedDir/solarized.vim
 rm $solarized
 ln -s $home/Configs/solarized.vim $solarized
+
+for f in .vimrc .zshrc
+do
+    ln -s $home/$f $home/Configs/$f

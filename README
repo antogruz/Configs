@@ -25,8 +25,12 @@ $ ln -s Configs/.vimrc .vimrc
 $ ln -s Configs/.zshrc .zshrc
 
 Copier le dossier .vim d'un autre ordinateur, puis :
-$ ln -s Configs/c.vim .vim/after/syntax/c.vim
-$ ln -s /home/tac/Configs/solarized.vim .vim/bundle/vim-colors-solarized/colors/solarized.vim
+$ ./Configs/linkall.sh
+
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
+
+Ouvrir vim puis:
+:PluginInstall
 
 Si le clic molette ne marche pas :
 	https://ubuntuforums.org/showthread.php?t=943803&p=5943530#post5943530

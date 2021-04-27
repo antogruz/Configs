@@ -6,7 +6,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Jenkinsfile-vim-syntax'
 Plugin 'thiagoalessio/rainbow_levels.vim'
 Plugin 'tpope/vim-surround'
 filetype plugin indent on
