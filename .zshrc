@@ -58,7 +58,7 @@ ZSH_THEME="blinks"
 # User configuration
 
 export PATH="/usr/lib/ccache"
-export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/agruzelle/bin:/Users/agruzelle/mybin"
+export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/agruzelle/bin:/Users/agruzelle/mybin:/Users/agruzelle/scripts"
 
 source $ZSH/oh-my-zsh.sh
 #source ~/.zsh/zsh-vcs-prompt/zshrc.sh
@@ -114,5 +114,6 @@ fi
 
 alias ctags=/usr/local/Cellar/ctags/5.8_1/bin/ctags
 
-export JAVA_HOME=/Users/agruzelle/blt/tools/Darwin/jdk/openjdk_11.0.1_x64/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/sfdc-openjdk_11.0.4.jdk/Contents/Home
+
 . /Users/agruzelle/mybin/z.sh

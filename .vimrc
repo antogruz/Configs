@@ -310,7 +310,7 @@ noremap <c-e> *N:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --
 noremap <c-b> *N:execute '!grep -n --exclude-dir=".git" --exclude-dir=".idea" --exclude-dir="target" --exclude="*~" --exclude=tags --exclude="*class" --exclude="*.txt" -I -R -w "new ' . expand("<cword>") . '" . '<CR>
 noremap <F2> :! bash `ls check*` <CR>
 nnoremap <CR> :!
-noremap <F1> :!./%<CR>
+noremap <leader>j :!./%<CR>
 " }}}
 
 " fvim in vim {{{
@@ -340,6 +340,7 @@ endfunc
 
 noremap - ddp
 noremap _ ddkP
+inoremap   _
 
 " Uppercases
 inoremap <leader>u <esc>viwU<esc>ea
@@ -373,10 +374,10 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 
 "don't use array keys
-inoremap <left> <nop>
-inoremap <up> <nop>
-inoremap <right> <nop>
-inoremap <down> <nop>
+noremap <left> <nop>
+nnoremap <up> <C-w>=
+noremap <right> <nop>
+noremap <down> <nop>
 nnoremap K i<cr><Esc>
 nnoremap sn F,dt,f,P
 nnoremap sp F,dt,F,P
@@ -462,6 +463,7 @@ iabbrev importlist import java.util.List
 nnoremap <leader>m :silent make<cr>:copen 10<cr>
 nnoremap « :cprevious<cr>
 nnoremap » :cnext<cr>
+
 
 set tabpagemax=100
 
